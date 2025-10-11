@@ -624,10 +624,7 @@ function renderQuiz(containerId, quizId) {
       textarea.name = `q${quizId}_${index}_open`;
       questionBlock.appendChild(textarea);
       
-      const hint = document.createElement('div');
-      hint.className = 'muted';
-      hint.textContent = `Hint: ${question.rubric}`;
-      questionBlock.appendChild(hint);
+      
     }
 
     container.appendChild(questionBlock);
