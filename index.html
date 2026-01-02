@@ -1852,76 +1852,7 @@ fig, axes = plt.subplots(3, 1, figsize=(8, 7), sharex=True) for name, ax in zip(
           </div>
         </article>
         
-        <!-- Formula 5: Moving Average -->
-        <article class="card formula-card">
-          <div class="formula-badge">Chapter 8</div>
-          <h3>3-Period Moving Average</h3>
-          
-          <!-- Formula Image Placeholder -->
-          <div class="formula-image-placeholder">
-            <img src="formulas/movingavg.png" 
-                 alt="Moving Average Formula"
-                 class="formula-img"
-                 onerror="this.onerror=null; this.src='https://latex.codecogs.com/svg.latex?%5Ctext%7BMA%7D_t%20%3D%20%5Cfrac%7Bx_t%20&plus;%20x_%7Bt-1%7D%20&plus;%20x_%7Bt-2%7D%7D%7B3%7D'">
-            <div class="placeholder-label">movingavg.png</div>
-          </div>
-          
-          <h4>Problem:</h4>
-          <p>Calculate 3-period moving average for monthly sales: [100, 120, 130, 110, 140, 150]</p>
-          
-          <div class="solution">
-            <h4>Step-by-Step Solution:</h4>
-            <ol>
-              <li><strong>Step 1: Start from period 3</strong><br>
-                Cannot calculate for first 2 periods (need 3 data points)
-              </li>
-              <li><strong>Step 2: Calculate for each period</strong><br>
-                MA₃ = (130+120+100)/3 = 350/3 ≈ 116.67<br>
-                MA₄ = (110+130+120)/3 = 360/3 = 120<br>
-                MA₅ = (140+110+130)/3 = 380/3 ≈ 126.67<br>
-                MA₆ = (150+140+110)/3 = 400/3 ≈ 133.33
-              </li>
-              <li><strong>Step 3: Interpretation</strong><br>
-                Moving average smooths fluctuations and shows the trend.
-              </li>
-            </ol>
-          </div>
-        </article>
-        
-        <!-- Formula 6: Percent Change -->
-        <article class="card formula-card">
-          <div class="formula-badge">Chapter 8</div>
-          <h3>Percent Change</h3>
-          
-          <!-- Formula Image Placeholder -->
-          <div class="formula-image-placeholder">
-            <img src="formulas/percentchange.png" 
-                 alt="Percent Change Formula"
-                 class="formula-img"
-                 onerror="this.onerror=null; this.src='https://latex.codecogs.com/svg.latex?%5C%25%20%5Ctext%7BChange%7D%20%3D%20%5Cleft%28%20%5Cfrac%7B%5Ctext%7BNew%7D%20-%20%5Ctext%7BOld%7D%7D%7B%5Ctext%7BOld%7D%7D%20%5Cright%29%20%5Ctimes%20100'">
-            <div class="placeholder-label">percentchange.png</div>
-          </div>
-          
-          <h4>Problem:</h4>
-          <p>Sales increased from $50,000 to $65,000. Calculate percent change.</p>
-          
-          <div class="solution">
-            <h4>Step-by-Step Solution:</h4>
-            <ol>
-              <li><strong>Step 1: Identify values</strong><br>
-                Old = 50000, New = 65000
-              </li>
-              <li><strong>Step 2: Calculate difference</strong><br>
-                Difference = 65000 - 50000 = 15000
-              </li>
-              <li><strong>Step 3: Apply formula</strong><br>
-                % Change = (15000/50000) × 100 = 0.3 × 100 = 30%
-              </li>
-              <li><strong>Step 4: Interpretation</strong><br>
-                Sales increased by 30% from previous period.
-              </li>
-            </ol>
-          </div>
+                 </div>
         </article>
         
       </div>
