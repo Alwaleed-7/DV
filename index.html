@@ -1666,7 +1666,7 @@ fig, axes = plt.subplots(3, 1, figsize=(8, 7), sharex=True) for name, ax in zip(
       </div>
     </section>
 	
-        <!-- Formulas & Problems Section -->
+               <!-- Formulas & Problems Section -->
     <section id="formulas" class="view">
       <h2>Formulas with Problems & Step-by-Step Solutions</h2>
       <p class="muted">Complete reference of all formulas with example problems and detailed step-by-step solutions. Practice applying each formula with real data scenarios.</p>
@@ -1677,10 +1677,14 @@ fig, axes = plt.subplots(3, 1, figsize=(8, 7), sharex=True) for name, ax in zip(
         <article class="card formula-card">
           <div class="formula-badge">Chapter 6</div>
           <h3>Pearson Correlation Coefficient (r)</h3>
-          <div class="formula-image-box">
-            <img src="https://latex.codecogs.com/svg.latex?r%20%3D%20%5Cfrac%7B%5Csum%20%28x_i%20-%20%5Cbar%7Bx%7D%29%28y_i%20-%20%5Cbar%7By%7D%29%7D%7B%5Csqrt%7B%5Csum%20%28x_i%20-%20%5Cbar%7Bx%7D%29%5E2%20%5Csum%20%28y_i%20-%20%5Cbar%7By%7D%29%5E2%7D%7D" 
+          
+          <!-- Formula Image Placeholder -->
+          <div class="formula-image-placeholder">
+            <img src="formulas/correlation.png" 
                  alt="Pearson Correlation Formula"
-                 class="formula-img">
+                 class="formula-img"
+                 onerror="this.onerror=null; this.src='https://latex.codecogs.com/svg.latex?r%20%3D%20%5Cfrac%7B%5Csum%20%28x_i%20-%20%5Cbar%7Bx%7D%29%28y_i%20-%20%5Cbar%7By%7D%29%7D%7B%5Csqrt%7B%5Csum%20%28x_i%20-%20%5Cbar%7Bx%7D%29%5E2%20%5Csum%20%28y_i%20-%20%5Cbar%7By%7D%29%5E2%7D%7D'">
+            <div class="placeholder-label">correlation.png</div>
           </div>
           
           <h4>Problem:</h4>
@@ -1702,12 +1706,8 @@ fig, axes = plt.subplots(3, 1, figsize=(8, 7), sharex=True) for name, ax in zip(
             <h4>Step-by-Step Solution:</h4>
             <ol>
               <li><strong>Step 1: Calculate means</strong><br>
-                <div class="step-math">
-                  <img src="https://latex.codecogs.com/svg.latex?%5Cbar%7Bx%7D%20%3D%20%5Cfrac%7B2%20&plus;%204%20&plus;%206%20&plus;%208%20&plus;%2010%7D%7B5%7D%20%3D%206" alt="mean x">
-                </div>
-                <div class="step-math">
-                  <img src="https://latex.codecogs.com/svg.latex?%5Cbar%7By%7D%20%3D%20%5Cfrac%7B60%20&plus;%2075%20&plus;%2085%20&plus;%2090%20&plus;%2095%7D%7B5%7D%20%3D%2081" alt="mean y">
-                </div>
+                x̄ = (2+4+6+8+10)/5 = 6<br>
+                ȳ = (60+75+85+90+95)/5 = 81
               </li>
               <li><strong>Step 2: Calculate deviations</strong><br>
                 <table class="calc-table">
@@ -1721,9 +1721,7 @@ fig, axes = plt.subplots(3, 1, figsize=(8, 7), sharex=True) for name, ax in zip(
                 </table>
               </li>
               <li><strong>Step 3: Apply formula</strong><br>
-                <div class="step-math">
-                  <img src="https://latex.codecogs.com/svg.latex?r%20%3D%20%5Cfrac%7B170%7D%7B%5Csqrt%7B40%20%5Ctimes%20770%7D%7D%20%3D%20%5Cfrac%7B170%7D%7B%5Csqrt%7B30800%7D%7D%20%3D%20%5Cfrac%7B170%7D%7B175.5%7D%20%5Capprox%200.968" alt="correlation calculation">
-                </div>
+                r = 170 / √(40 × 770) = 170 / √30800 = 170 / 175.5 ≈ 0.968
               </li>
               <li><strong>Step 4: Interpretation</strong><br>
                 r ≈ 0.97 indicates a very strong positive correlation between study hours and exam scores.
@@ -1736,16 +1734,14 @@ fig, axes = plt.subplots(3, 1, figsize=(8, 7), sharex=True) for name, ax in zip(
         <article class="card formula-card">
           <div class="formula-badge">Chapter 7</div>
           <h3>TF-IDF (Term Frequency-Inverse Document Frequency)</h3>
-          <div class="formula-image-box">
-            <img src="https://latex.codecogs.com/svg.latex?%5Ctext%7BTF-IDF%7D%20%3D%20%5Ctext%7BTF%7D%28t%2Cd%29%20%5Ctimes%20%5Ctext%7BIDF%7D%28t%29" 
+          
+          <!-- Formula Image Placeholder -->
+          <div class="formula-image-placeholder">
+            <img src="formulas/tfidf.png" 
                  alt="TF-IDF Formula"
-                 class="formula-img">
-            <img src="https://latex.codecogs.com/svg.latex?%5Ctext%7BTF%7D%28t%2Cd%29%20%3D%20%5Cfrac%7B%5Ctext%7BNumber%20of%20times%20term%20%7D%20t%20%5Ctext%7B%20appears%20in%20document%20%7D%20d%7D%7B%5Ctext%7BTotal%20terms%20in%20%7D%20d%7D" 
-                 alt="TF Formula"
-                 class="formula-img">
-            <img src="https://latex.codecogs.com/svg.latex?%5Ctext%7BIDF%7D%28t%29%20%3D%20%5Clog%5Cleft%28%5Cfrac%7BN%7D%7Bn_t%7D%5Cright%29" 
-                 alt="IDF Formula"
-                 class="formula-img">
+                 class="formula-img"
+                 onerror="this.onerror=null; this.src='https://latex.codecogs.com/svg.latex?%5Ctext%7BTF-IDF%7D%20%3D%20%5Ctext%7BTF%7D%28t%2Cd%29%20%5Ctimes%20%5Ctext%7BIDF%7D%28t%29'">
+            <div class="placeholder-label">tfidf.png</div>
           </div>
           
           <h4>Problem:</h4>
@@ -1760,22 +1756,15 @@ fig, axes = plt.subplots(3, 1, figsize=(8, 7), sharex=True) for name, ax in zip(
             <h4>Step-by-Step Solution:</h4>
             <ol>
               <li><strong>Step 1: Calculate TF for "data" in Document 2</strong><br>
-                <div class="step-math">
-                  <img src="https://latex.codecogs.com/svg.latex?%5Ctext%7BTF%7D%20%3D%20%5Cfrac%7B2%7D%7B5%7D%20%3D%200.4" alt="TF calculation">
-                </div>
+                TF = (2 occurrences) / (5 total words) = 0.4
               </li>
               <li><strong>Step 2: Calculate IDF for "data"</strong><br>
-                <div class="step-math">
-                  <img src="https://latex.codecogs.com/svg.latex?N%20%3D%203%2C%20%5Cquad%20n_t%20%3D%203" alt="N and n_t">
-                </div>
-                <div class="step-math">
-                  <img src="https://latex.codecogs.com/svg.latex?%5Ctext%7BIDF%7D%20%3D%20%5Clog%5Cleft%28%5Cfrac%7B3%7D%7B3%7D%5Cright%29%20%3D%20%5Clog%281%29%20%3D%200" alt="IDF calculation">
-                </div>
+                Total documents (N) = 3<br>
+                Documents containing "data" = 3 (appears in all documents)<br>
+                IDF = log(3/3) = log(1) = 0
               </li>
               <li><strong>Step 3: Calculate TF-IDF</strong><br>
-                <div class="step-math">
-                  <img src="https://latex.codecogs.com/svg.latex?%5Ctext%7BTF-IDF%7D%20%3D%200.4%20%5Ctimes%200%20%3D%200" alt="TF-IDF calculation">
-                </div>
+                TF-IDF = log(1 + 0.4) × 0 = 0
               </li>
               <li><strong>Step 4: Interpretation</strong><br>
                 TF-IDF = 0 indicates "data" is too common across all documents to be discriminating.
@@ -1788,15 +1777,14 @@ fig, axes = plt.subplots(3, 1, figsize=(8, 7), sharex=True) for name, ax in zip(
         <article class="card formula-card">
           <div class="formula-badge">Chapter 3</div>
           <h3>Z-Score Normalization</h3>
-          <div class="formula-image-box">
-            <img src="https://latex.codecogs.com/svg.latex?z%20%3D%20%5Cfrac%7Bx%20-%20%5Cmu%7D%7B%5Csigma%7D" 
+          
+          <!-- Formula Image Placeholder -->
+          <div class="formula-image-placeholder">
+            <img src="formulas/zscore.png" 
                  alt="Z-Score Formula"
-                 class="formula-img">
-            <div class="formula-where">
-              <p>Where:</p>
-              <p><img src="https://latex.codecogs.com/svg.latex?%5Cmu" alt="mu"> = mean of the dataset</p>
-              <p><img src="https://latex.codecogs.com/svg.latex?%5Csigma" alt="sigma"> = standard deviation of the dataset</p>
-            </div>
+                 class="formula-img"
+                 onerror="this.onerror=null; this.src='https://latex.codecogs.com/svg.latex?z%20%3D%20%5Cfrac%7Bx%20-%20%5Cmu%7D%7B%5Csigma%7D'">
+            <div class="placeholder-label">zscore.png</div>
           </div>
           
           <h4>Problem:</h4>
@@ -1806,29 +1794,19 @@ fig, axes = plt.subplots(3, 1, figsize=(8, 7), sharex=True) for name, ax in zip(
             <h4>Step-by-Step Solution:</h4>
             <ol>
               <li><strong>Step 1: Calculate mean (μ)</strong><br>
-                <div class="step-math">
-                  <img src="https://latex.codecogs.com/svg.latex?%5Cmu%20%3D%20%5Cfrac%7B75%20&plus;%2082%20&plus;%2090%20&plus;%2068%20&plus;%2085%7D%7B5%7D%20%3D%20%5Cfrac%7B400%7D%7B5%7D%20%3D%2080" alt="mean calculation">
-                </div>
+                μ = (75+82+90+68+85)/5 = 400/5 = 80
               </li>
               <li><strong>Step 2: Calculate standard deviation (σ)</strong><br>
-                <div class="step-math">
-                  <img src="https://latex.codecogs.com/svg.latex?%5Ctext%7BVariance%7D%20%3D%20%5Cfrac%7B%2875-80%29%5E2%20&plus;%20%2882-80%29%5E2%20&plus;%20%2890-80%29%5E2%20&plus;%20%2868-80%29%5E2%20&plus;%20%2885-80%29%5E2%7D%7B5%7D" alt="variance formula">
-                </div>
-                <div class="step-math">
-                  <img src="https://latex.codecogs.com/svg.latex?%3D%20%5Cfrac%7B25%20&plus;%204%20&plus;%20100%20&plus;%20144%20&plus;%2025%7D%7B5%7D%20%3D%20%5Cfrac%7B298%7D%7B5%7D%20%3D%2059.6" alt="variance calculation">
-                </div>
-                <div class="step-math">
-                  <img src="https://latex.codecogs.com/svg.latex?%5Csigma%20%3D%20%5Csqrt%7B59.6%7D%20%5Capprox%207.72" alt="standard deviation">
-                </div>
+                Variance = [(75-80)² + (82-80)² + (90-80)² + (68-80)² + (85-80)²] / 5<br>
+                = [25 + 4 + 100 + 144 + 25] / 5 = 298/5 = 59.6<br>
+                σ = √59.6 ≈ 7.72
               </li>
               <li><strong>Step 3: Calculate z-scores</strong><br>
-                <div class="step-math-inline">
-                  <img src="https://latex.codecogs.com/svg.latex?z_1%20%5Capprox%20-0.65" alt="z1">
-                  <img src="https://latex.codecogs.com/svg.latex?z_2%20%5Capprox%200.26" alt="z2">
-                  <img src="https://latex.codecogs.com/svg.latex?z_3%20%5Capprox%201.30" alt="z3">
-                  <img src="https://latex.codecogs.com/svg.latex?z_4%20%5Capprox%20-1.55" alt="z4">
-                  <img src="https://latex.codecogs.com/svg.latex?z_5%20%5Capprox%200.65" alt="z5">
-                </div>
+                z₁ = (75-80)/7.72 ≈ -0.65<br>
+                z₂ = (82-80)/7.72 ≈ 0.26<br>
+                z₃ = (90-80)/7.72 ≈ 1.30<br>
+                z₄ = (68-80)/7.72 ≈ -1.55<br>
+                z₅ = (85-80)/7.72 ≈ 0.65
               </li>
               <li><strong>Step 4: Interpretation</strong><br>
                 Scores are now normalized with mean=0 and standard deviation=1.
@@ -1841,11 +1819,14 @@ fig, axes = plt.subplots(3, 1, figsize=(8, 7), sharex=True) for name, ax in zip(
         <article class="card formula-card">
           <div class="formula-badge">Chapter 3</div>
           <h3>Min-Max Normalization</h3>
-          <div class="formula-image-box">
-            <img src="https://latex.codecogs.com/svg.latex?x%27%20%3D%20%5Cfrac%7Bx%20-%20%5Cmin%7D%7B%5Cmax%20-%20%5Cmin%7D" 
+          
+          <!-- Formula Image Placeholder -->
+          <div class="formula-image-placeholder">
+            <img src="formulas/minmax.png" 
                  alt="Min-Max Formula"
-                 class="formula-img">
-            <p>Scales values to [0, 1] range.</p>
+                 class="formula-img"
+                 onerror="this.onerror=null; this.src='https://latex.codecogs.com/svg.latex?x%27%20%3D%20%5Cfrac%7Bx%20-%20%5Cmin%7D%7B%5Cmax%20-%20%5Cmin%7D'">
+            <div class="placeholder-label">minmax.png</div>
           </div>
           
           <h4>Problem:</h4>
@@ -1855,26 +1836,14 @@ fig, axes = plt.subplots(3, 1, figsize=(8, 7), sharex=True) for name, ax in zip(
             <h4>Step-by-Step Solution:</h4>
             <ol>
               <li><strong>Step 1: Find min and max</strong><br>
-                <div class="step-math">
-                  <img src="https://latex.codecogs.com/svg.latex?%5Cmin%20%3D%2018%2C%20%5Cquad%20%5Cmax%20%3D%2060" alt="min max">
-                </div>
+                min = 18, max = 60
               </li>
               <li><strong>Step 2: Apply formula for each value</strong><br>
-                <div class="step-math">
-                  <img src="https://latex.codecogs.com/svg.latex?x_1%27%20%3D%20%5Cfrac%7B18-18%7D%7B60-18%7D%20%3D%200" alt="x1 prime">
-                </div>
-                <div class="step-math">
-                  <img src="https://latex.codecogs.com/svg.latex?x_2%27%20%5Capprox%200.17" alt="x2 prime">
-                </div>
-                <div class="step-math">
-                  <img src="https://latex.codecogs.com/svg.latex?x_3%27%20%5Capprox%200.33" alt="x3 prime">
-                </div>
-                <div class="step-math">
-                  <img src="https://latex.codecogs.com/svg.latex?x_4%27%20%5Capprox%200.64" alt="x4 prime">
-                </div>
-                <div class="step-math">
-                  <img src="https://latex.codecogs.com/svg.latex?x_5%27%20%3D%201" alt="x5 prime">
-                </div>
+                x₁' = (18-18)/(60-18) = 0/42 = 0<br>
+                x₂' = (25-18)/(60-18) = 7/42 ≈ 0.17<br>
+                x₃' = (32-18)/(60-18) = 14/42 ≈ 0.33<br>
+                x₄' = (45-18)/(60-18) = 27/42 ≈ 0.64<br>
+                x₅' = (60-18)/(60-18) = 42/42 = 1
               </li>
               <li><strong>Step 3: Interpretation</strong><br>
                 Ages are scaled proportionally between youngest (0) and oldest (1).
@@ -1887,11 +1856,14 @@ fig, axes = plt.subplots(3, 1, figsize=(8, 7), sharex=True) for name, ax in zip(
         <article class="card formula-card">
           <div class="formula-badge">Chapter 8</div>
           <h3>3-Period Moving Average</h3>
-          <div class="formula-image-box">
-            <img src="https://latex.codecogs.com/svg.latex?%5Ctext%7BMA%7D_t%20%3D%20%5Cfrac%7Bx_t%20&plus;%20x_%7Bt-1%7D%20&plus;%20x_%7Bt-2%7D%7D%7B3%7D" 
+          
+          <!-- Formula Image Placeholder -->
+          <div class="formula-image-placeholder">
+            <img src="formulas/movingavg.png" 
                  alt="Moving Average Formula"
-                 class="formula-img">
-            <p>Where t = current period.</p>
+                 class="formula-img"
+                 onerror="this.onerror=null; this.src='https://latex.codecogs.com/svg.latex?%5Ctext%7BMA%7D_t%20%3D%20%5Cfrac%7Bx_t%20&plus;%20x_%7Bt-1%7D%20&plus;%20x_%7Bt-2%7D%7D%7B3%7D'">
+            <div class="placeholder-label">movingavg.png</div>
           </div>
           
           <h4>Problem:</h4>
@@ -1904,18 +1876,10 @@ fig, axes = plt.subplots(3, 1, figsize=(8, 7), sharex=True) for name, ax in zip(
                 Cannot calculate for first 2 periods (need 3 data points)
               </li>
               <li><strong>Step 2: Calculate for each period</strong><br>
-                <div class="step-math">
-                  <img src="https://latex.codecogs.com/svg.latex?%5Ctext%7BMA%7D_3%20%5Capprox%20116.67" alt="MA3">
-                </div>
-                <div class="step-math">
-                  <img src="https://latex.codecogs.com/svg.latex?%5Ctext%7BMA%7D_4%20%3D%20120" alt="MA4">
-                </div>
-                <div class="step-math">
-                  <img src="https://latex.codecogs.com/svg.latex?%5Ctext%7BMA%7D_5%20%5Capprox%20126.67" alt="MA5">
-                </div>
-                <div class="step-math">
-                  <img src="https://latex.codecogs.com/svg.latex?%5Ctext%7BMA%7D_6%20%5Capprox%20133.33" alt="MA6">
-                </div>
+                MA₃ = (130+120+100)/3 = 350/3 ≈ 116.67<br>
+                MA₄ = (110+130+120)/3 = 360/3 = 120<br>
+                MA₅ = (140+110+130)/3 = 380/3 ≈ 126.67<br>
+                MA₆ = (150+140+110)/3 = 400/3 ≈ 133.33
               </li>
               <li><strong>Step 3: Interpretation</strong><br>
                 Moving average smooths fluctuations and shows the trend.
@@ -1928,10 +1892,14 @@ fig, axes = plt.subplots(3, 1, figsize=(8, 7), sharex=True) for name, ax in zip(
         <article class="card formula-card">
           <div class="formula-badge">Chapter 8</div>
           <h3>Percent Change</h3>
-          <div class="formula-image-box">
-            <img src="https://latex.codecogs.com/svg.latex?%5C%25%20%5Ctext%7BChange%7D%20%3D%20%5Cleft%28%20%5Cfrac%7B%5Ctext%7BNew%7D%20-%20%5Ctext%7BOld%7D%7D%7B%5Ctext%7BOld%7D%7D%20%5Cright%29%20%5Ctimes%20100" 
+          
+          <!-- Formula Image Placeholder -->
+          <div class="formula-image-placeholder">
+            <img src="formulas/percentchange.png" 
                  alt="Percent Change Formula"
-                 class="formula-img">
+                 class="formula-img"
+                 onerror="this.onerror=null; this.src='https://latex.codecogs.com/svg.latex?%5C%25%20%5Ctext%7BChange%7D%20%3D%20%5Cleft%28%20%5Cfrac%7B%5Ctext%7BNew%7D%20-%20%5Ctext%7BOld%7D%7D%7B%5Ctext%7BOld%7D%7D%20%5Cright%29%20%5Ctimes%20100'">
+            <div class="placeholder-label">percentchange.png</div>
           </div>
           
           <h4>Problem:</h4>
@@ -1947,9 +1915,7 @@ fig, axes = plt.subplots(3, 1, figsize=(8, 7), sharex=True) for name, ax in zip(
                 Difference = 65000 - 50000 = 15000
               </li>
               <li><strong>Step 3: Apply formula</strong><br>
-                <div class="step-math">
-                  <img src="https://latex.codecogs.com/svg.latex?%5C%25%20%5Ctext%7BChange%7D%20%3D%20%5Cleft%28%20%5Cfrac%7B15000%7D%7B50000%7D%20%5Cright%29%20%5Ctimes%20100%20%3D%200.3%20%5Ctimes%20100%20%3D%2030%5C%25" alt="percent change calculation">
-                </div>
+                % Change = (15000/50000) × 100 = 0.3 × 100 = 30%
               </li>
               <li><strong>Step 4: Interpretation</strong><br>
                 Sales increased by 30% from previous period.
