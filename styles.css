@@ -1676,90 +1676,158 @@ summary:focus-visible {
   }
 
 
-/* Enhanced Formula Styling with Images */
-.formula-image-box {
+/* Formulas Section Styles */
+.formulas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.formula-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.formula-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  z-index: 10;
+}
+
+.formula-image-placeholder {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border: 2px dashed #cbd5e1;
   border-radius: 12px;
-  padding: 2rem;
+  padding: 2.5rem;
   margin: 1.5rem 0;
   text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.formula-image-placeholder:before {
+  content: "📐 Formula Image";
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #64748b;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  z-index: 2;
 }
 
 .formula-img {
   max-width: 100%;
   height: auto;
-  margin: 1rem 0;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
-  transition: transform 0.3s ease;
-}
-
-.formula-img:hover {
-  transform: scale(1.02);
-}
-
-.formula-where {
-  margin-top: 1.5rem;
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  text-align: left;
-}
-
-.formula-where p {
+  max-height: 80px;
   margin: 0.5rem 0;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  object-fit: contain;
+}
+
+.placeholder-label {
+  background: #3b82f6;
   color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  font-family: monospace;
 }
 
-.step-math {
-  margin: 0.5rem 0;
-  padding: 0.5rem;
-  background: #f8fafc;
-  border-radius: 8px;
-  border-left: 4px solid #4f46e5;
-  display: inline-block;
+/* Solution styling */
+.solution {
+  background: linear-gradient(to right, #f0f9ff, #e6f7ff);
+  border-left: 4px solid #3b82f6;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  border-radius: 0 8px 8px 0;
 }
 
-.step-math-inline {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+.solution h4 {
+  margin-top: 0;
+  color: #1e40af;
+  font-size: 1.1rem;
+}
+
+.solution ol {
   margin: 1rem 0;
+  padding-left: 1.5rem;
 }
 
-.step-math-inline img {
-  height: 24px;
-  margin: 0.25rem;
+.solution li {
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+  line-height: 1.6;
 }
 
-/* Enhanced table styling */
-.calc-table {
-  font-size: 0.85rem;
+/* Tables */
+.data-table, .calc-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.calc-table th {
+.data-table th, .calc-table th {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
+  padding: 0.75rem;
+  text-align: center;
+  border: 1px solid #cbd5e1;
+  font-weight: 600;
 }
 
-/* Responsive adjustments */
+.data-table td, .calc-table td {
+  padding: 0.75rem;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+}
+
+.calc-table tr:last-child {
+  background: #f0f9ff;
+  font-weight: 600;
+}
+
+/* Responsive design */
 @media (max-width: 768px) {
-  .formula-image-box {
-    padding: 1rem;
+  .formulas-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .formula-image-placeholder {
+    padding: 1.5rem;
+    min-height: 100px;
   }
   
   .formula-img {
-    max-width: 95%;
+    max-height: 60px;
   }
   
-  .step-math-inline {
-    gap: 0.5rem;
+  .data-table, .calc-table {
+    font-size: 0.8rem;
+    display: block;
+    overflow-x: auto;
   }
   
-  .step-math-inline img {
-    height: 20px;
+  .solution {
+    padding: 1rem;
   }
 }
