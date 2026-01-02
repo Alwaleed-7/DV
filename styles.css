@@ -1155,7 +1155,7 @@ main {
 
 .comparison-table th,
 .comparison-table td {
-  padding: var(--space-12);
+  padding: var(--space-20) var(--space-30);
   text-align: left;
   border-bottom: 1px solid var(--color-border);
 }
@@ -1673,5 +1673,93 @@ summary:focus-visible {
   
   .view.active {
     display: block !important;
+  }
+
+
+/* Enhanced Formula Styling with Images */
+.formula-image-box {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 1.5rem 0;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.formula-img {
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.formula-img:hover {
+  transform: scale(1.02);
+}
+
+.formula-where {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  text-align: left;
+}
+
+.formula-where p {
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+}
+
+.step-math {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  border-left: 4px solid #4f46e5;
+  display: inline-block;
+}
+
+.step-math-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.step-math-inline img {
+  height: 24px;
+  margin: 0.25rem;
+}
+
+/* Enhanced table styling */
+.calc-table {
+  font-size: 0.85rem;
+}
+
+.calc-table th {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .formula-image-box {
+    padding: 1rem;
+  }
+  
+  .formula-img {
+    max-width: 95%;
+  }
+  
+  .step-math-inline {
+    gap: 0.5rem;
+  }
+  
+  .step-math-inline img {
+    height: 20px;
   }
 }
